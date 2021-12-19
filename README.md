@@ -40,4 +40,4 @@ MIT
 Author Information
 ------------------
 
-This role was created in 2021 by [Thomas Stadler]{https://thomasst.xyz}.
+This role was created in 2021 by [Thomas Stadler](https://thomasst.xyz).

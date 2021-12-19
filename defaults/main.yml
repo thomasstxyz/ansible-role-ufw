@@ -1,0 +1,7 @@
+---
+ufw_package_state: present
+ufw_reset: no
+ufw_ports_allow:
+- 22
+ufw_default_policy: deny
+ufw_state: enabled

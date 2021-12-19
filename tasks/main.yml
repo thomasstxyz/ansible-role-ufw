@@ -1,0 +1,27 @@
+---
+- name: package ufw is {{ ufw_package_state }}
+  package:
+    name: ufw
+    state: "{{ ufw_package_state }}"
+
+- name: reset ufw configuration to default settings
+  community.general.ufw:
+    state: reset
+  when: ufw_reset
+
+- name: ufw allow ports
+  community.general.ufw:
+    rule: allow
+    port: "{{ item }}"
+  with_items: "{{ ufw_ports_allow }}"
+
+- name: set rate limit on ssh
+  community.general.ufw:
+    rule: limit
+    port: ssh
+    proto: tcp
+
+- name: ufw is {{ ufw_state }} with default policy {{ ufw_default_policy }}
+  community.general.ufw:
+    state: "{{ ufw_state }}"
+    default: "{{ ufw_default_policy }}"

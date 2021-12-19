@@ -39,7 +39,7 @@ License
 
 MIT
 
-<!-- Author Information
+Author Information
 ------------------
 
-An optional section for the role authors to include contact information, or a website (HTML is not allowed). -->
+This role was created in 2021 by [Thomas Stadler]{https://thomasst.xyz}.
